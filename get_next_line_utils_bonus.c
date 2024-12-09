@@ -1,8 +1,20 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   get_next_line_utils_bonus.c                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ablabib <marvin@42.fr>                     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/12/09 20:34:49 by ablabib           #+#    #+#             */
+/*   Updated: 2024/12/09 20:34:50 by ablabib          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "get_next_line_bonus.h"
 
-size_t ft_strlen(const char *s)
+size_t	ft_strlen(const char *s)
 {
-	size_t len;
+	size_t	len;
 
 	len = 0;
 	while (s[len])
@@ -10,9 +22,9 @@ size_t ft_strlen(const char *s)
 	return (len);
 }
 
-char *ft_strchr(const char *s, int c)
+char	*ft_strchr(const char *s, int c)
 {
-	char ch;
+	char	ch;
 
 	ch = (char)c;
 	while (*s)
@@ -26,13 +38,13 @@ char *ft_strchr(const char *s, int c)
 	return (NULL);
 }
 
-char *ft_strjoin(char const *s1, char const *s2)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	char *str;
-	size_t len1;
-	size_t len2;
-	size_t i;
-	size_t j;
+	char	*str;
+	size_t	len1;
+	size_t	len2;
+	size_t	i;
+	size_t	j;
 
 	if (!s1 || !s2)
 		return (NULL);
@@ -52,11 +64,11 @@ char *ft_strjoin(char const *s1, char const *s2)
 	return (str);
 }
 
-char *ft_strdup(const char *s)
+char	*ft_strdup(const char *s)
 {
-	char *str;
-	size_t len;
-	size_t i;
+	char	*str;
+	size_t	len;
+	size_t	i;
 
 	len = ft_strlen(s);
 	str = (char *)malloc((len + 1) * sizeof(char));
@@ -72,11 +84,11 @@ char *ft_strdup(const char *s)
 	return (str);
 }
 
-char *ft_substr(char const *s, unsigned int start, size_t len)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	unsigned int i;
-	size_t j;
-	char *substr;
+	unsigned int	i;
+	size_t			j;
+	char			*substr;
 
 	i = -1;
 	j = 0;
