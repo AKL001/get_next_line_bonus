@@ -60,10 +60,9 @@ static char	*read_from_file(int fd, char *buffer, char *static_buffer)
 	char	*tmp;
 	int		bytes_read;
 
-	bytes_read = 1;
+	bytes_read = read(fd, buffer, BUFFER_SIZE);
 	while (bytes_read > 0)
 	{
-		bytes_read = read(fd, buffer, BUFFER_SIZE);
 		buffer[bytes_read] = '\0';
 		if (!static_buffer)
 			static_buffer = ft_strdup("");
