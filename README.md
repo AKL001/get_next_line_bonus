@@ -44,6 +44,12 @@ int main(void)
 ```bash
 cc -Wall -Wextra -Werror -D BUFFER_SIZE=42 get_next_line.c get_next_line_utils.c main.c -o gnl && ./gnl
 ```
+### 💧 Checking for Memory Leaks with Valgrind:
+*🔍 Keep your code leak-free by regularly checking with Valgrind*
+**To check your program for memory leaks, use the following command:**
+```
+valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes ./gnl
+```
 ---
 
 ## 🛠️ Project Status  
